@@ -19,7 +19,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     type = 'path'
     style = 'diamond'
     trailing_diamond = ''
-    template = '   {{ .Path }} '
+    template = '   {{ .PWD }} '
     background = '#ff479c'
     foreground = '#ffffff'
 
@@ -146,20 +146,6 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
 
 [[blocks]]
   type = 'rprompt'
-
-
-  [[blocks.segments]]
-    type = 'ytm'
-    style = 'powerline'
-    powerline_symbol = ''
-    invert_powerline = true
-    template = '  {{ .Icon }}{{ if ne .Status "stopped" }}{{ .Artist }} - {{ .Track }}{{ end }} '
-    background = '#1BD760'
-    foreground = '#111111'
-
-    [blocks.segments.properties]
-      paused_icon = ' '
-      playing_icon = ' '
 
   [[blocks.segments]]
     type = 'executiontime'
